@@ -1,0 +1,14 @@
+main {
+  background-color: $primaryColor;
+  height: 100vh;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+   li img {
+    height: $sizeImg;
+
+  }
+
+}
