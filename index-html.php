@@ -12,11 +12,11 @@
           <img src="img/logo.png" alt="">
         </div>
         <select class="selection" name="genre">
-                  <option value="all">Tutti i generi</option>
+                  <option value="All">All</option>
                   <option value="Bon Jovi">Bon Jovi</option>
                   <option value="NOFX">NOFX</option>
                   <option value="Khruangbin & Leon Bridges">Khruangbin & Leon Bridges</option>
-                  <option value="Pet Shop Boys">Khruangbin & Leon Bridge</option>
+                  <option value="Pet Shop Boys">Pet Shop Boys</option>
                   <option value="Aretha Franklin">Aretha Franklin</option>
                   <option value="Blink-182">Blink-182</option>
                   <option value="Capo Plaza">Capo Plaza</option>

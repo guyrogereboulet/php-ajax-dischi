@@ -7,12 +7,29 @@
       url:'http://localhost:88/php-ajax-dischi/server-ajax.php',
       method:'GET',
       success: function (data){
-        console.log(data);
         printResult(data);
       },
       error: function (request, state, errors) {
         alert('errore');
       }
+    });
+    $('.selection').change(function(){
+      var author = $(this).val();
+      console.log(author);
+      $.ajax(
+        {
+          url:'http://localhost:88/php-ajax-dischi/server-ajax.php',
+          method:'GET',
+          data: {
+            author: author
+          },
+          success: function (data){
+            printResult(data);
+          },
+          error: function (request, state, errors) {
+            alert('errore');
+          }
+        });
     });
 
 
@@ -47,6 +64,13 @@
       printResultNo();
     }
   }
+  function printResultNo() {
+  var source = $("#cd-template").html();
+  var template = Handlebars.compile(source);
+  var html = template(context);
+  $('.container-cd').append(html);
+}
+
 
   function reset () {
   $('.container-cd').html('');

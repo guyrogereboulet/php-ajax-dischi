@@ -15822,12 +15822,28 @@ $(document).ready(function () {
     url: 'http://localhost:88/php-ajax-dischi/server-ajax.php',
     method: 'GET',
     success: function success(data) {
-      console.log(data);
       printResult(data);
     },
     error: function error(request, state, errors) {
       alert('errore');
     }
+  });
+  $('.selection').change(function () {
+    var author = $(this).val();
+    console.log(author);
+    $.ajax({
+      url: 'http://localhost:88/php-ajax-dischi/server-ajax.php',
+      method: 'GET',
+      data: {
+        author: author
+      },
+      success: function success(data) {
+        printResult(data);
+      },
+      error: function error(request, state, errors) {
+        alert('errore');
+      }
+    });
   });
 }); //FUNCTIONS
 
@@ -15851,6 +15867,13 @@ function printResult(result) {
     } else {
       printResultNo();
     }
+  }
+
+  function printResultNo() {
+    var source = $("#cd-template").html();
+    var template = Handlebars.compile(source);
+    var html = template(context);
+    $('.container-cd').append(html);
   }
 
   function reset() {
