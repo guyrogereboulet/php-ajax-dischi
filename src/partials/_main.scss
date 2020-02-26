@@ -1,12 +1,22 @@
 main {
   background-color: $primaryColor;
   height: 100vh;
+  margin: 0 auto;
+
   ul {
     display: flex;
+    flex-basis: calc(100% / 3);
     flex-wrap: wrap;
+    justify-content: space-around;
     list-style: none;
+    li {
+      margin: 10px;
+      text-align: center;
+      color: white;
+      border: 1px solid white;
+    }
   }
-   li img {
+  li img {
     height: $sizeImg;
 
   }

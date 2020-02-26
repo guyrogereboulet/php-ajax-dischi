@@ -19,29 +19,35 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="img/logo.png" alt="">
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo.png" alt="">
+        </div>
       </div>
     </header>
 
     <main>
-      <ul>
+      <div class="container">
+        <ul>
 
-       <?php foreach ($database as $cd) { ?>
+         <?php foreach ($database as $cd) { ?>
 
-        <li>
-          <img src="<?php echo $cd["poster"];?>" alt="">
-          <p><?php echo $cd["title"];?></p>
-          <p><?php echo $cd["author"];?></p>
-          <p><?php echo $cd["year"];?></p>
-        </li>
-
-
+          <li>
+            <img src="<?php echo $cd["poster"];?>" alt="">
+            <h3><?php echo $cd["title"];?></h3>
+            <p><?php echo $cd["author"];?></p>
+            <small><?php echo $cd["year"];?></small>
+          </li>
 
 
-       <?php } ?>
 
-      </ul>
+
+         <?php } ?>
+
+        </ul>
+
+      </div>
+
 
     </main>
 
