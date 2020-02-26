@@ -23,7 +23,7 @@
 
      [
        'title' => 'Hotspot',
-       'author' => 'Pet Shop Boys ',
+       'author' => 'Pet Shop Boys',
        'year' => 2020,
        'poster' => 'https://img.discogs.com/Q5AAey3roJ3JzHVqCIopYkaFJaY=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-14692292-1579841765-8334.jpeg.jpg'
      ],
