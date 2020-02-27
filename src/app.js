@@ -13,9 +13,11 @@
         alert('errore');
       }
     });
+
     $('.selection').change(function(){
       var author = $(this).val();
       console.log(author);
+      // return;
       $.ajax(
         {
           url:'http://localhost:88/php-ajax-dischi/server-ajax.php',
@@ -23,13 +25,19 @@
           data: {
             author: author
           },
+
+          beforeSend: function(jqXHR, settings) {
+            console.log(settings.url);
+          },
           success: function (data){
             printResult(data);
           },
           error: function (request, state, errors) {
             alert('errore');
+            console.log(errors);
           }
         });
+
     });
   });
 

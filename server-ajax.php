@@ -1,8 +1,10 @@
 <?php
  include 'server.php';
-
+//var_dump($database); die();
  $author = $_GET["author"];
+ // var_dump($author); die();
  if (empty($author) || $author === "All") {
+   // var_dump($database); die();
    header('Content-Type: application/json');
    echo json_encode($database);
  } else {
@@ -22,11 +24,10 @@
         ]
       ];
    }
+    header('Content-Type: application/json');
+    echo json_encode($cdFilter);
  }
 
 
-
- header('Content-Type: application/json');
- echo json_encode($cdFilter);
 
 ?>

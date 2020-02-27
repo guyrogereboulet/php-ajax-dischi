@@ -15830,18 +15830,23 @@ $(document).ready(function () {
   });
   $('.selection').change(function () {
     var author = $(this).val();
-    console.log(author);
+    console.log(author); // return;
+
     $.ajax({
       url: 'http://localhost:88/php-ajax-dischi/server-ajax.php',
       method: 'GET',
       data: {
         author: author
       },
+      beforeSend: function beforeSend(jqXHR, settings) {
+        console.log(settings.url);
+      },
       success: function success(data) {
         printResult(data);
       },
       error: function error(request, state, errors) {
         alert('errore');
+        console.log(errors);
       }
     });
   });
