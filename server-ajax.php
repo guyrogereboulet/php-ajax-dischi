@@ -5,7 +5,7 @@
  if (empty($author) || $author === "All") {
    header('Content-Type: application/json');
    echo json_encode($database);
- }else {
+ } else {
    $cdFilter= [];
    foreach ($database as $cd ) {
      if ($cd["author"] === $author) {
